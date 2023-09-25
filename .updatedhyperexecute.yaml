@@ -1,0 +1,61 @@
+version: "0.1"
+user: vkdlaafd
+key: ngKpulcNQENNQHpyt6BxXwwkG2dcIeSXGTmyATnU6LQ0it5ccv
+matrix: {test: ["1"]}
+testSuites: [gradle --version, gradle clean build]
+pre: [printenv]
+preDirectives:
+    commands: [printenv]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+jobLabel:
+    - new relic
+runson: linux
+autosplit: false
+concurrency: 4
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+maxRetries: 1
+jobID: 35876ba1-37c8-4fac-9047-0e3434b767bd
+codeDirectory: DBDemoApp_3
+runtime:
+    language: java
+    version: ${STATIC_DATA_1_JAVA_VERSION}
+    addons:
+        - name: gradle
+          version: ${STATIC_DATA_1_GRADLE_VERSION}
+        - name: android-sdk
+          version: ${STATIC_DATA_1_ANDROID_SDK_VERSION}
+framework:
+    name: ""
+    flags: []
+    discoveryFlags: []
+    discoveryType: ""
+    runnerFlags: []
+    workingDirectory: ""
+    isTestNGXMLSuite: false
+    defaultReports: false
+    additional_args: null
+    licenseKey: ""
+    userdefinediscovery: false
+    toscaArgs: null
+    version: ""
+    downloadURL: ""
+cypress: false
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+combineTasksInMatrixMode: false
+captureScreenRecordingForScenarios: false
+maxRetriesPreSteps: 0
+triggerMode: false
+sourcePayload:
+    verifySSL: true
+collectLocalGitData: true
+dynamicAllocation: false
+appium: false
