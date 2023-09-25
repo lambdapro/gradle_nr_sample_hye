@@ -29,20 +29,20 @@ If not logged in, it will be redirected to Login/Signup page and simultaneously 
 If not signed up, you need to sign up and simultaneously redirected to Gitpod in a new tab where current tab will show hyperexecute dashboard.--->
 
 
-# How to run Selenium automation tests on HyperExecute (using TestNG framework)
+# How to run Selenium automation tests on HyperExecute 
 
 * [Pre-requisites](#pre-requisites)
    - [Download HyperExecute CLI](#download-hyperexecute-cli)
    - [Configure Environment Variables](#configure-environment-variables)
 
-* [Auto-Split Execution with TestNG](#auto-split-execution-with-testng)
+* [Auto-Split Execution](#auto-split-execution-with-testng)
    - [Core](#core)
    - [Pre Steps and Dependency Caching](#pre-steps-and-dependency-caching)
    - [Post Steps](#post-steps)
    - [Artifacts Management](#artifacts-management)
    - [Test Execution](#test-execution)
 
-* [Matrix Execution with TestNG](#matrix-execution-with-testng)
+* [Matrix Execution ](#matrix-execution-with-testng)
    - [Core](#core-1)
    - [Pre Steps and Dependency Caching](#pre-steps-and-dependency-caching-1)
    - [Post Steps](#post-steps-1)
@@ -91,7 +91,7 @@ set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 
-## Auto-Split Execution with TestNG
+## Auto-Split Execution
 
 Auto-split execution mechanism lets you run tests at predefined concurrency and distribute the tests over the available infrastructure. Concurrency can be achieved at different levels - file, module, test suite, test, scenario, etc.
 
@@ -208,12 +208,12 @@ Now, you can download the artifacts by clicking on the Download button as shown 
 
 The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/win/testng_hyperexecute_autosplit_sample.yaml* for Windows and *yaml/linux/testng_hyperexecute_autosplit_sample.yaml* for Linux).
 
-#### Execute TestNG tests using Autosplit mechanism on Windows platform
+#### Execute tests using Autosplit mechanism on Windows platform
 
 Run the following command on the terminal to trigger the tests in Java files with HyperExecute platform set to Windows. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job. The *--force-clean-artifacts* option force cleans any existing artifacts for the project.
 
 ```bash
-./hyperexecute --config yaml/win/testng_hyperexecute_autosplit_sample.yaml --force-clean-artifacts --download-artifacts
+./hyperexecute --config hyper.yaml --force-clean-artifacts --download-artifacts
 ```
 
 #### Execute TestNG tests using Autosplit mechanism on Linux platform
@@ -221,7 +221,7 @@ Run the following command on the terminal to trigger the tests in Java files wit
 Run the following command on the terminal to trigger the tests in Java files with HyperExecute platform set to Linux. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job. The *--force-clean-artifacts* option force cleans any existing artifacts for the project.
 
 ```bash
-./hyperexecute --config yaml/linux/testng_hyperexecute_autosplit_sample.yaml --force-clean-artifacts --download-artifacts
+./hyperexecute --config hyper.yaml --force-clean-artifacts --download-artifacts
 ```
 
 Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution
